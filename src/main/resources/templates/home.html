@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang Chủ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .logo img {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .button-group button {
+      width: 45%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .button-group button.login {
+      background-color: #4CAF50;
+      color: #fff;
+    }
+    
+    .button-group button.register {
+      background-color: #008CBA;
+      color: #fff;
+    }
+    
+    .button-group button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Trang Chủ</h1>
+    <div class="logo">
+      <img src="path_to_your_logo.png" alt="Logo">
+    </div>
+    <div class="button-group">
+      <a class="login" th:href="@{login}">Đăng nhập</a>
+      <a class="register" th:href="@{register}">Đăng ký</a>
+    </div>
+  </div>
+</body>
+</html>
