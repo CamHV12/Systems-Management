@@ -55,10 +55,10 @@
 <body>
 	<div class="container">
 		<h2>Xác nhận</h2>
-		<form th:action="@{/home}" th:object="${user}" method="POST">
+		<form th:action="@{/confirm/{id}(id=${user.id})}" th:object="${user}" method="POST">
 			<div class="form-group">
 				<label for="confirm_password">Xác nhận mật khẩu:</label>
-				<input type="password" id="confirm_password" name="confirm_password" placeholder="Xác nhận mật khẩu">
+				<input type="password" th:field="*{password}" id="confirm_password" name="confirm_password" placeholder="Xác nhận mật khẩu">
 			</div>
 			<div class="form-group">
 				<div class="box-footer">

@@ -1,5 +1,7 @@
 package vn.spring.data.business.service.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -25,5 +27,10 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public Long getById(Long id) {
 		return userRepository.findById(id).get().getId();
+	}
+	
+	@Override
+	public List<User> getAllUser(){
+		return userRepository.findAll();
 	}
 }
