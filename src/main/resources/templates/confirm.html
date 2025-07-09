@@ -55,7 +55,10 @@
 <body>
 	<div class="container">
 		<h2>Xác nhận</h2>
-		<form th:action="@{/confirm/{id}(id=${user.id})}" th:object="${user}" method="POST">
+		<div th:if="${error}" style="color: red; text-align: center; margin-bottom: 10px;">
+			<span th:text="${error}"></span>
+		</div>
+		<form th:action="@{/confirm/{username}(username=${username})}" th:object="${user}" method="POST">
 			<div class="form-group">
 				<label for="confirm_password">Xác nhận mật khẩu:</label>
 				<input type="password" th:field="*{password}" id="confirm_password" name="confirm_password" placeholder="Xác nhận mật khẩu">

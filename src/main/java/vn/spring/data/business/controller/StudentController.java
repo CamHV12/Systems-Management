@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.fasterxml.jackson.databind.ser.std.StdArraySerializers.LongArraySerializer;
-
 import lombok.RequiredArgsConstructor;
 import vn.spring.data.business.entity.Student;
 import vn.spring.data.business.service.StudentService;
